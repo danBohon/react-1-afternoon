@@ -29,7 +29,7 @@ export default class FilterObject extends Component {
     }
 
     handleChange(val) {
-        this.setState( { userInput: val});
+        this.setState( { userInput: val });
     }
 
     filteredEmployees(prop) {
@@ -37,7 +37,7 @@ export default class FilterObject extends Component {
         let filteredEmployees = [];
         
         for(let i = 0; i < employees.length; i++) {
-            if (employees[i].hasOwnProperty(prop)) {
+            if (employees[i].hasOwnProperty(prop) ) {
                 filteredEmployees.push(employees[i])
             }
         }
@@ -48,12 +48,12 @@ export default class FilterObject extends Component {
     
     render() {
         return (
-            <div className="puzzleBox filteredObjectPB">
+            <div className="puzzleBox filterObjectPB">
                 <h4> Filter Object </h4>
                 <span className="puzzleText"> Origional: { JSON.stringify(this.state.employees, null, 10) } </span>
                 <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
                 <button className="confirmationButton" onClick={ () => this.filteredEmployees(this.state.userInput) }> Filter </button>
-                <span className="resultsBox" filterObjectRB> Fliltered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
+                <span className="resultsBox filterObjectRB"> Fliltered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
             </div>
         )
     }

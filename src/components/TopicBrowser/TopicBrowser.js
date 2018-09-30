@@ -7,11 +7,7 @@ import Sum from '../Topics/Sum';
 
 
 class TopicBrowser  extends Component {
-    constructor () {
-        super();
-    }
-
-
+    
     render() {
         return (
             <div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { parse } from 'url';
 
 export default class EvenAndOdd extends Component {
     constructor() {

@@ -38,7 +38,7 @@ export default class FilterString extends Component {
                 <span className="puzzleText"> Names: {JSON.stringify(this.state.unFilteredArray, null, 10) }</span>
                 <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
                 <button className="confirmationButton" onClick={ () => this.filterFunc(this.state.userInput) }> Filter </button>
-                <span className = "resultsBox filterStringRB"> Filtered Names { JSON.stringify(this.state.filteredArray, null, 10) } </span>
+                <span className="resultsBox filterStringRB"> Filtered Names { JSON.stringify(this.state.filteredArray, null, 10) } </span>
             </div>
         )
     }
